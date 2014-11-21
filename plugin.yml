@@ -1,0 +1,34 @@
+name: HoneyChest
+main: HoneyChest\main
+version: 0.0.0
+api: [1.7.1]
+load: POSTWORLD
+author: rain318
+description: HoneyChest Plugin
+website: https://github.com/rain318/HoneyChest
+commands:
+ hc:
+  description: "HoneyChest Plugin"
+  usage: " /hc <command>"
+permissions:
+honeychest.*:
+  description: "HoneyChest Pluginで提供される全機能が使用可能になります。"
+  default: op
+honeychest.info:
+  description: "/hc info が使用可能になります。"
+  default: true
+honeychest.help:
+  description: "/hc help が使用可能になります。"
+  default: true
+honeychest.set:
+  description: "/hc set が使用可能になります。"
+  default: op
+honeychest.remove:
+  description: "/hc remove が使用可能になります。"
+  default: op
+honeychest.reload:
+  description: "/hc reload が使用可能になります。"
+  default: op
+honeychest.exception:
+  description: "HoneyChestに登録されたチェスト内のアイテムを取っても、自動動作しなくなります。"
+  default: op

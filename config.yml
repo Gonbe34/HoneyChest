@@ -1,0 +1,7 @@
+---
+Config version=1.0
+BroadCaster=none
+Action=cmd
+Command=say HoneyChest Test Msg
+Do you agree with the license?=false
+...

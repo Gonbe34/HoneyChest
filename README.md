@@ -22,45 +22,35 @@ kick、BANはもちろん、MCPEbansから提供されるGBANや、各種コマ�
 ## Config.yml
 Plugin導入後、一度サーバーを起動させる必要があります。  
 サーバーを起動させるとConfig.ymlが生成されるので、編集をしてください。
-
-> Config version
->> 変更しないでください。
-
-> BroadCaster
->> HoneyChestが動作した際に、表示するメッセージを記載してください。  
->> 何も表示させなく無い場合は「none」と記載してください。
-
-> Action
->> 動作する際に、何を行うか記載してください。  
->> kick(プレイヤーをサーバーから強制切断します)  
->> ban(プレイヤーをサーバーから永久通報します)  
->> cmd(任意のコマンドを実行します。)
-
-> Command
->> Action: cmd にした際に使用します。動作した際に行ってほしい、コマンドを入力してください。  
->> 例: Command: say HoneyChest Test Msg
-
-> Do you agree with the license?
->> 日本語訳すると「ライセンスに同意しますか？」です。  
->> 同意する場合は、trueと入力してください。
+|config|説明|
+|-----|-----|
+|Config version|変更しないでください。|
+|BroadCaster|HoneyChestが動作した際に、表示するメッセージを記載してください。<br>何も表示させなく無い場合は「none」と記載してください。|
+|Action|動作する際に、何を行うか記載してください。<br>kick(プレイヤーをサーバーから強制切断します)<br>ban(プレイヤーをサーバーから永久通報します)<br>cmd(任意のコマンドを実行します。)|
+|Command|Action: cmd にした際に使用します。<br>動作した際に行ってほしい、コマンドを入力してください。<br>例: Command: say HoneyChest Test Msg|
+|Do you agree with the license?|日本語訳すると「ライセンスに同意しますか？」です。<br>同意する場合は、trueと入力してください。|
 
 ## コマンド
-* /hc info    --  Pluginの情報を表示します。
-* /hc help    --  Pluginのコマンド一覧を表示します。
-* /hc set     --  HoneyChestの登録に追加するチェストを選択します。
-* /hc remove  --  HoneyChestの登録を解除するチェストを選択します。
-* /hc reload  --  HoneyChest PluginのConfig.ymlを再読み込みします。  
+|コマンド|説明|
+|-----|-----|
+|/hc info|Pluginの情報を表示します。|
+|/hc help|Pluginのコマンド一覧を表示します。|
+|/hc set|HoneyChestの登録に追加するチェストを選択します。|
+|/hc remove|HoneyChestの登録を解除するチェストを選択します。|
+|/hc reload|HoneyChest PluginのConfig.ymlを再読み込みします。|
 
 「/hc set」「/hc remove」を入力した後に、該当チェストをタップする必要があります。
 
 ## パーミッションノート
-* honeychest.*          --  HoneyChest Pluginで提供される全機能が使用可能になります。
-* honeychest.info       --  /hc info が使用可能になります。
-* honeychest.help       --  /hc help が使用可能になります。
-* honeychest.set        --  /hc set が使用可能になります。
-* honeychest.remove     --  /hc remove が使用可能になります。
-* honeychest.reload     --  /hc reload が使用可能になります。
-* honeychest.exception  --  この権限がある場合、チェスト内を操作しても動作しません。  
+|コマンド|説明|
+|-----|-----|
+|honeychest.*|HoneyChest Pluginで提供される全機能が使用可能になります。|
+|honeychest.info|/hc info が使用可能になります。|
+|honeychest.help|/hc help が使用可能になります。|
+|honeychest.set|/hc set が使用可能になります。|
+|honeychest.remove|/hc remove が使用可能になります。|
+|honeychest.reload|/hc reload が使用可能になります。|
+|honeychest.exception|この権限がある場合、チェスト内を操作しても動作しません。|
 
 info, helpはデフォルトで誰でも利用可能になっております。  
 その他の権限は、デフォルトでOP権限者に付与されています。
@@ -73,9 +63,11 @@ info, helpはデフォルトで誰でも利用可能になっております。
 
 ## バージョンについて
 バージョンは、基本的に「X.Y.Z」で構成されております。
-* X  --  インターフェースの変更によって下位互換性が失われる大きな変更
-* Y  --  新しい機能の追加（ただし既存インターフェースの下位互換は保証）
-* Z  --  インターフェースに影響を与えない内部的な変更(バグ修正等々)  
+|値|説明|
+|:-----:|-----|
+|X|インターフェースの変更によって下位互換性が失われる大きな変更|
+|Y|新しい機能の追加（ただし既存インターフェースの下位互換は保証）|
+|Z|インターフェースに影響を与えない内部的な変更(バグ修正等々)|
 
 また、開発途中のプログラムの場合は、「X.Y.Z [Build #]」となり、  
 プラグイン開発が完了した際に、Build番号は取り除かれます。  

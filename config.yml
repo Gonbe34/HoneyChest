@@ -1,7 +1,21 @@
 ---
-Config version=1.0
-BroadCaster=none
-Action=cmd
-Command=say HoneyChest Test Msg
-Do you agree with the license?=false
+# 変更しないでください。
+Config version: 1.0
+
+# HoneyChestが動作した際に、表示するメッセージを記載してください。
+# 何も表示させなく無い場合は「none」と記載してください。
+BroadCaster: none
+
+# 動作する際に、何を行うか記載してください。
+# ・kick(プレイヤーをサーバーから強制切断します)
+# ・ban(プレイヤーをサーバーから永久通報します)
+# ・cmd(任意のコマンドを実行します。)
+Action: cmd
+
+# Action: cmd にした際に使用します。無記入でも可。
+# 動作した際に行ってほしい、コマンドを入力してください。
+# 例: Command: say HoneyChest Test Msg
+Command: say HoneyChest Test Msg
+
+Do you agree with the license?: false
 ...

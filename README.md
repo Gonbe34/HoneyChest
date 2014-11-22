@@ -25,21 +25,21 @@ Plugin導入後、一度サーバーを起動させる必要があります。
 >> 変更しないでください。
 
 > BroadCaster
->> HoneyChestが動作した際に、表示するメッセージを記載してください。
+>> HoneyChestが動作した際に、表示するメッセージを記載してください。  
 >> 何も表示させなく無い場合は「none」と記載してください。
 
 > Action
->> 動作する際に、何を行うか記載してください。
->> kick(プレイヤーをサーバーから強制切断します)
->> ban(プレイヤーをサーバーから永久通報します)
+>> 動作する際に、何を行うか記載してください。  
+>> kick(プレイヤーをサーバーから強制切断します)  
+>> ban(プレイヤーをサーバーから永久通報します)  
 >> cmd(任意のコマンドを実行します。)
 
 > Command
->> Action=cmd にした際に使用します。動作した際に行ってほしい、コマンドを入力してください。
->> 例: Command=say HoneyChest Test Msg
+>> Action: cmd にした際に使用します。動作した際に行ってほしい、コマンドを入力してください。  
+>> 例: Command: say HoneyChest Test Msg
 
 > Do you agree with the license?
->> 日本語訳すると「ライセンスに同意しますか？」です。
+>> 日本語訳すると「ライセンスに同意しますか？」です。  
 >> 同意する場合は、trueと入力してください。
 
 ## コマンド
@@ -56,7 +56,7 @@ Plugin導入後、一度サーバーを起動させる必要があります。
 * honeychest.set        --  /hc set が使用可能になります。
 * honeychest.remove     --  /hc remove が使用可能になります。
 * honeychest.reload     --  /hc reload が使用可能になります。
-* honeychest.exception  --  HoneyChestに登録されたチェスト内のアイテムを取っても、自動動作しなくなります。  
+* honeychest.exception  --  この権限がある場合、チェスト内を操作しても動作しません。  
 info, helpはデフォルトで誰でも利用可能になっております。  
 その他の権限は、デフォルトでOP権限者に付与されています。
 

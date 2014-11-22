@@ -2,22 +2,45 @@
 
 namespace HoneyChest;
 
-use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
-use pocketmine\command\Command;
-use pocketmine\command\CommandExecutor;
-use pocketmine\command\CommandSender;
-use pocketmine\Server;
-use pocketmine\utils\TextFormat;	# 色文字
-use pocketmine\utils\Config;		# Config.yml
-use pocketmine\Permission;		# Permission
 use pocketmine\event\Listener;
+use pocketmine\command\Command;
+use pocketmine\command\CommandSender;
+use pocketmine\command\CommandExecutor;	
+
+use pocketmine\utils\Config;			#config.yml
+use pocketmine\utils\TextFormat;		#ColorText
+
+/*
+pocketmine\inventory\ChestInventory
+use pocketmine\Player;
+use pocketmine\Server;
+use pocketmine\Permission;		# Permission
 use pocketmine\event\player\PlayerChatEvent;
 use pocketmine\event\player\PlayerInteractEvent;
+*/
 
 class HoneyChest extends PluginBase{
 
-	public function onCommand(CommandSender $sender, Command $cmd, $args){
+	public function onEnable(){
+		$this->getLogger()->info(TextFormat::AQUA."HoneyChest Plugin Load");
+	}
+
+	public function onCommand(CommandSender $sender, Command $command, $commandLabel, array $args){
+		if(strtolower($command->getName()) === "test t"){
+			$sender->sendMessage(TextFormat::GREEN."/hc info    >>>  Pluginの情報を表示します。");
+			$sender->sendMessage(TextFormat::GREEN."/hc help    >>>  Pluginのコマンド一覧を表示します。");
+			$sender->sendMessage(TextFormat::GREEN."/hc set     >>>  HoneyChestの登録に追加するチェストを選択します。");
+			$sender->sendMessage(TextFormat::GREEN."/hc remove  >>>  HoneyChestの登録を解除するチェストを選択します。");
+			$sender->sendMessage(TextFormat::GREEN."/hc reload  >>>  HoneyChest PluginのConfig.ymlを再読み込みします。");
+			return true;
+		}else{
+			$sender->sendMessage(TextFormat::YELLOW."コマンドが見つかりませんでした。");
+			return true;
+		}
+	}
+
+/*	public function onCommand(CommandSender $sender, Command $cmd, $args){
     	$fcmd = strtolower($cmd->getName());
 	switch($fcmd){
 		case "honeychest":
@@ -56,4 +79,5 @@ class HoneyChest extends PluginBase{
 			}
 		}
 	}
+*/
 }

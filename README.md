@@ -25,17 +25,10 @@ Plugin導入後、一度サーバーを起動させる必要があります。
 |config|説明|
 |-----|-----|
 |Config version|変更しないでください。|
-|BroadCaster|HoneyChestが動作した際に、表示するメッセージを記載してください。|
-||何も表示させなく無い場合は「none」と記載してください。|
-|Action|動作する際に、何を行うか記載してください。|
-||kick(プレイヤーをサーバーから強制切断します)|
-||ban(プレイヤーをサーバーから永久通報します)|
-||cmd(任意のコマンドを実行します。)|
-|Command|Action: cmd にした際に使用します。|
-||動作した際に行ってほしい、コマンドを入力してください。|
-||例: Command: say HoneyChest Test Msg|
-|Do you agree with the license?|日本語訳すると「ライセンスに同意しますか？」です。|
-||同意する場合は、trueと入力してください。|
+|BroadCaster|HoneyChestが動作した際に、表示するメッセージを記載してください。何も表示させなく無い場合は「none」と記載してください。|
+|Action|動作する際に、何を行うか記載してください。(kick, ban, cmd)|
+|Command|Action: cmd にした際に使用します。動作した際に行ってほしい、コマンドを入力してください。|
+|Do you agree with the license?|ライセンスに同意する場合は、trueと入力してください。|
 
 ## コマンド
 |コマンド|説明|

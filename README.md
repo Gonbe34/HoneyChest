@@ -1,4 +1,4 @@
-##目次
+## 目次
 * HoneyChestとは
 * ライセンス
 * Config.yml
@@ -9,7 +9,8 @@
 ## HoneyChestとは
 HoneyChestは、荒らし対策Pluginの一種です。  
 プレイヤーがチェスト内からアイテムを盗むと、自動的に動作します。  
-動作内容は、kick、BANはもちろん、MCPEbansから提供されるGlobalBANや、各種コマンドにも対応しています。  
+kick、BANはもちろん、MCPEbansから提供されるGBANや、各種コマンドにも対応しています。  
+
 ※MCPEbansから提供されるGlobalBANは準備中です
 
 ## ライセンス
@@ -19,7 +20,7 @@ HoneyChestは、荒らし対策Pluginの一種です。
 
 ## Config.yml
 Plugin導入後、一度サーバーを起動させる必要があります。  
-サーバーを起動させるとConfig.ymlが生成されるので、編集してください。
+サーバーを起動させるとConfig.ymlが生成されるので、編集をしてください。
 
 > Config version
 >> 変更しないでください。
@@ -45,9 +46,11 @@ Plugin導入後、一度サーバーを起動させる必要があります。
 ## コマンド
 * /hc info    --  Pluginの情報を表示します。
 * /hc help    --  Pluginのコマンド一覧を表示します。
-* /hc set     --  HoneyChestの登録に追加するチェストを選択します。(入力後、該当チェストをタップしてください。)
-* /hc remove  --  HoneyChestの登録を解除するチェストを選択します。(入力後、該当チェストをタップしてください。)
-* /hc reload  --  HoneyChest PluginのConfig.ymlを再読み込みします。
+* /hc set     --  HoneyChestの登録に追加するチェストを選択します。
+* /hc remove  --  HoneyChestの登録を解除するチェストを選択します。
+* /hc reload  --  HoneyChest PluginのConfig.ymlを再読み込みします。  
+
+「/hc set」「/hc remove」を入力した後に、該当チェストをタップする必要があります。
 
 ## パーミッションノート
 * honeychest.*          --  HoneyChest Pluginで提供される全機能が使用可能になります。
@@ -57,6 +60,7 @@ Plugin導入後、一度サーバーを起動させる必要があります。
 * honeychest.remove     --  /hc remove が使用可能になります。
 * honeychest.reload     --  /hc reload が使用可能になります。
 * honeychest.exception  --  この権限がある場合、チェスト内を操作しても動作しません。  
+
 info, helpはデフォルトで誰でも利用可能になっております。  
 その他の権限は、デフォルトでOP権限者に付与されています。
 

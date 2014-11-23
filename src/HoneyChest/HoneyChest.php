@@ -45,39 +45,43 @@ class HoneyChest extends PluginBase{
 	switch($fcmd){
 		case "honeychest":
 			if(isset($args[0])){
-				$args[0] = strtolower($args[0]);
-    				if($args[0]=="help"){
-    					if($sender->hasPermission("honeychest.*","honeychest.commands.help")){
-    						$sender->sendMessage(TextFormat::GREEN."/hc info    >>>  Pluginの情報を表示します。");
-    						$sender->sendMessage(TextFormat::GREEN."/hc help    >>>  Pluginのコマンド一覧を表示します。");
-    						$sender->sendMessage(TextFormat::GREEN."/hc set     >>>  HoneyChestの登録に追加するチェストを選択します。");
-    						$sender->sendMessage(TextFormat::GREEN."/hc remove  >>>  HoneyChestの登録を解除するチェストを選択します。");
-    						$sender->sendMessage(TextFormat::GREEN."/hc reload  >>>  HoneyChest PluginのConfig.ymlを再読み込みします。");
-    						break;
-    					}else{
-    						$sender->sendMessage(TextFormat::RED."このコマンドを使用する権限がありません。");
-    						break;
-    					}
-    				}elseif($args[0]=="info"){
-    					if($sender->hasPermission("honeychest.*","honeychest.commands.info")){
-    						$sender->sendMessage(TextFormat::AQUA."Plugin Developer : rain318");
-						$sender->sendMessage(TextFormat::AQUA."Plugin Version   : 0.0.0");
-					break;
-    					}else{
-    						$sender->sendMessage(TextFormat::RED."このコマンドを使用する権限がありません。");
-    						break;
-    					}
-    				}else{
-    					if($sender->hasPermission("honeychest.*","honeychest.info","honeychest.help","honeychest.set","honeychest.remove","honeychest.reload","honeychest.exception")){
-    						$sender->sendMessage(TextFormat::YELLOW."コマンドが見つかりません。/hc help でコマンドの一覧を表示してください。");
-						break;
-    					}else{
-    						$sender->sendMessage(TextFormat::RED."このコマンドを使用する権限がありません。");
-    						break;
-    					}
+				$param = strtolower($args[0]);
+    				switch($param){
+    					case "help":
+	    					if($sender->hasPermission("honeychest.*","honeychest.commands.help")){
+	    						$sender->sendMessage(TextFormat::GREEN."/hc info    >>>  Pluginの情報を表示します。");
+	    						$sender->sendMessage(TextFormat::GREEN."/hc help    >>>  Pluginのコマンド一覧を表示します。");
+	    						$sender->sendMessage(TextFormat::GREEN."/hc set     >>>  HoneyChestの登録に追加するチェストを選択します。");
+	    						$sender->sendMessage(TextFormat::GREEN."/hc remove  >>>  HoneyChestの登録を解除するチェストを選択します。");
+	    						$sender->sendMessage(TextFormat::GREEN."/hc reload  >>>  HoneyChest PluginのConfig.ymlを再読み込みします。");
+	    						break;
+	    					}else{
+	    						$sender->sendMessage(TextFormat::RED."このコマンドを使用する権限がありません。");
+	    						break;
+	    					}
+    					break;
+    					case "info":
+	    					if($sender->hasPermission("honeychest.*","honeychest.commands.info")){
+	    						$sender->sendMessage(TextFormat::AQUA."Plugin Developer : rain318");
+							$sender->sendMessage(TextFormat::AQUA."Plugin Version   : 0.0.0");
+	    					}else{
+	    						$sender->sendMessage(TextFormat::RED."このコマンドを使用する権限がありません。");
+	    						break;
+	    					}
+	    				break;
+    					default:
+	    					if($sender->hasPermission("honeychest.*","honeychest.info","honeychest.help","honeychest.set","honeychest.remove","honeychest.reload","honeychest.exception")){
+	    						$sender->sendMessage(TextFormat::YELLOW."コマンドが見つかりません。/hc help でコマンドの一覧を表示してください。");
+							break;
+	    					}else{
+	    						$sender->sendMessage(TextFormat::RED."このコマンドを使用する権限がありません。");
+	    						break;
+	    					}
+	    				break;
     				}
 			}
-		}
+		break;
+	}
 	}
 */
 }
